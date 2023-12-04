@@ -6,7 +6,7 @@ import 'package:book_store/features/Home/data/repos/home_repo.dart';
 import 'package:book_store/features/Home/data/web_services/web_services.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
- 
+
 class HomeRepoImpl implements HomeRepo {
   final WebServices _webServices;
   HomeRepoImpl(
@@ -42,7 +42,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks() async {
     try {
       String endpoint = 'volumes?Filtering=free-ebooks&q=subject:Programming';
-
+      var a = "ali";
       var data = await _webServices.get(endPoint: endpoint);
       List<BookModel> booksData = [];
 
@@ -57,11 +57,13 @@ class HomeRepoImpl implements HomeRepo {
       return left(ServerFailure(errormessage: e.toString()));
     }
   }
-  
+
   @override
-  Future<Either<Failure, List<BookModel>>> fetchRecommendedBooks({required String category } ) async{
-        try {
-      String endpoint =  "volumes?Filtering=free-ebooks&q=subject:computer science&Sorting=relevance";
+  Future<Either<Failure, List<BookModel>>> fetchRecommendedBooks(
+      {required String category}) async {
+    try {
+      String endpoint =
+          "volumes?Filtering=free-ebooks&q=subject:computer science&Sorting=relevance";
 
       var data = await _webServices.get(endPoint: endpoint);
       List<BookModel> booksData = [];
