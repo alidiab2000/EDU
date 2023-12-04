@@ -17,9 +17,14 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(
-            AssetsData.logo,
-            height: 16,
+          InkWell(
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
+            child: Image.asset(
+              AssetsData.logo,
+              height: 16,
+            ),
           ),
           IconButton(
             icon: const Icon(

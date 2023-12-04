@@ -1,4 +1,4 @@
-import 'package:book_store/features/Home/presentation/views/widgets/best_seller_list_view.dart';
+import 'best_seller_list_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/style.dart';
 import 'custom_app_bar.dart';

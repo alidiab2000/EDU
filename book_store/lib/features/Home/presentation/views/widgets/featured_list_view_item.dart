@@ -1,11 +1,10 @@
-import 'package:book_store/core/utils/app_router.dart';
+import '../../../../../core/utils/app_router.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/widget/custom_error_widget.dart';
 import '../../view_models/featured_books_cuibt/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/widget/custom_loading_indecator.dart';
 import 'book_item.dart';
 
 class FeaturedListView extends StatelessWidget {
@@ -44,8 +43,7 @@ class FeaturedListView extends StatelessWidget {
           } else if (state is FeaturedBooksFailuer) {
             return CustomErrorWidget(errorMessage: state.errorMessage);
           } else {
-            //TODO Reloading secleton
-            return const CustomLoadingIndecator();
+            return const Center(child: CircularProgressIndicator());
           }
         },
       ),

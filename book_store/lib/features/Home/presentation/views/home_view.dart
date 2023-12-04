@@ -1,4 +1,6 @@
+import 'package:book_store/features/Home/presentation/views/widgets/my_drawer.dart';
 import 'package:flutter/material.dart';
+
 import 'widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,6 +10,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: HomeViewBody(),
+      drawer: MyDrawer(),
     );
   }
 }

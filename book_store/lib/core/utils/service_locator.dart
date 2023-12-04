@@ -1,6 +1,7 @@
-import 'package:book_store/constat.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../constat.dart';
 import '../../features/Home/data/repos/home_repo_impl.dart';
 import '../../features/Home/data/web_services/web_services.dart';
 

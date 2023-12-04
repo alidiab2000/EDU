@@ -1,5 +1,5 @@
-import 'package:book_store/features/Home/data/models/book_model/book_model.dart';
-import 'package:book_store/features/Home/presentation/views/widgets/custom_book_image.dart';
+import '../../../data/models/book_model/book_model.dart';
+import 'custom_book_image.dart';
  import 'package:flutter/material.dart';
 
 class BooKImageItem extends StatelessWidget {

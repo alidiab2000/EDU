@@ -30,8 +30,8 @@ environment:
 dependencies:
   align_positioned: ^3.0.0
   bloc: ^8.1.2
-  cloud_firestore: ^4.8.5
   cupertino_icons: ^1.0.2
+  cloud_firestore: ^4.8.5
   firebase_auth: ^4.6.1
   firebase_core: ^2.13.0
   flutter:

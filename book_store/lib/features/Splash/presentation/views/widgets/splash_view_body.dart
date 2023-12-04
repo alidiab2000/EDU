@@ -1,3 +1,5 @@
+import 'package:book_store/constat.dart';
+import 'package:book_store/core/utils/shared_pref.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -59,11 +61,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
     });
   }
 
-  void navigatToHomeView() {
+  void navigatToHomeView() async {
+    bool login = await SharedPref.getData(loginSharedPref);
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+        GoRouter.of(context).pushReplacement(
+          login ? AppRouter.kHomeView : AppRouter.kLoginView,
+        );
       },
     );
   }

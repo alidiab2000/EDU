@@ -1,9 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:book_store/constat.dart';
+import 'package:book_store/features/Home/data/models/book_model/book_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-
-import 'package:book_store/features/Home/data/models/book_model/book_model.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({
