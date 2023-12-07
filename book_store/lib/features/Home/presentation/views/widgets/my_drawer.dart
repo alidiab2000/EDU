@@ -41,7 +41,9 @@ class _MyDrawerState extends State<MyDrawer> {
             },
           ),
           ListTile(
-            title: const Text('User Email'),
+            title: Text(
+              FirebaseAuth.instance.currentUser!.displayName ?? "User name",
+            ),
             onTap: () {
               Navigator.pop(context);
             },

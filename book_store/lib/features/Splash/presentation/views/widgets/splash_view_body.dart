@@ -62,7 +62,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigatToHomeView() async {
-    bool login = await SharedPref.getData(loginSharedPref);
+    bool login = await SharedPref.getData(loginSharedPref) ?? false;
     Future.delayed(
       const Duration(seconds: 2),
       () {

@@ -28,7 +28,6 @@ class _LoginViewBodyState extends State<RegisterViewBody> {
     phoneController = TextEditingController();
     passController = TextEditingController();
     nameController = TextEditingController();
-    emailController.text = '@gmail.com';
     super.initState();
   }
 
@@ -133,8 +132,6 @@ class _LoginViewBodyState extends State<RegisterViewBody> {
       await BlocProvider.of<AuthCubit>(context).register(
         email: emailController.text,
         password: passController.text,
-        name: nameController.text,
-        phone: phoneController.text,
       );
     }
   }
