@@ -40,12 +40,16 @@ final class AuthSuccess extends AuthState {
     required this.phone,
     required this.password,
 
+
+
   }) {
+    
     SharedPref.setData(loginSharedPref, true);
     SharedPref.setData(nameSharedPref,name);
     SharedPref.setData(email,email );
     SharedPref.setData(loginSharedPref, true);
     SharedPref.setData(loginSharedPref, true);
+
     
   }
 

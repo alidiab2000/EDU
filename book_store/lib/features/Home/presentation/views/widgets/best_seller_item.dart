@@ -15,17 +15,21 @@ class BestSellerItem extends StatelessWidget {
     required this.book,
   });
   final BookModel book;
+
   @override
   Widget build(BuildContext context) {
+   
     return InkWell(
       onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetailsview, extra: book);
       },
       child: SizedBox(
         height: 130,
+        
         child: Row(
           children: [
             CustomBookImage(book: book),
+            
             const SizedBox(
               width: 30,
             ),
